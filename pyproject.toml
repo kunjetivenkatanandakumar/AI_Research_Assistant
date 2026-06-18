@@ -1,0 +1,21 @@
+[project]
+name = "ai-research-assistant"
+version = "0.1.0"
+description = "LangGraph-powered AI research assistant that searches the web and generates PDF reports."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=0.2.0",
+    "openai>=1.50.0",
+    "pydantic>=2.8.0",
+    "python-dotenv>=1.0.1",
+    "reportlab>=4.2.0",
+    "streamlit>=1.37.0",
+    "tavily-python>=0.5.0",
+]
+
+[project.scripts]
+research-assistant = "research_assistant.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
